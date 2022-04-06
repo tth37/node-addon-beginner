@@ -8,6 +8,14 @@ This is a template for a basic Node.js project with C++ addons.
 
 Download and install Node.js from its official website.
 
+If you are deploying on Ubuntu, simply run the following scripts:
+
+```shell
+$ sudo apt install nodejs npm
+$ sudo npm install -g n
+$ n latest
+```
+
 Install yrm to help you switch between different npm registries:
 
 ```shell
@@ -25,9 +33,15 @@ $ npm install yarn --global
 
 Download and install CMake from its official website.
 
+If you are deploying on Ubuntu, simply run the following scripts:
+
+```shell
+$ sudo apt install build-essential
+```
+
 Make sure that CXX and C compilers are available on your device.
 
-For `node-addon-api` developers, MinGW tool chain is not supported. Use Visual Studio instead.
+For `node-addon-api` developers, `MinGW Makefiles` toolchain is not supported. Use Visual Studio instead.
 
 ### cmake-js
 
@@ -61,8 +75,9 @@ Copy those cmake-js configurations, and set the variables at cmake options list.
 Run the app while watching file changes:
 
 ```shell
+$ yarn
 $ yarn install
-$ yarn build:dev
+$ yarn start:dev
 ```
 
 ### node-addon-api developers
@@ -70,8 +85,9 @@ $ yarn build:dev
 Similar to Node.js developers:
 
 ```shell
+$ yarn
 $ yarn install
-$ yarn build:dev
+$ yarn start:dev
 ```
 
 When CMake project is updated, simply run `yarn install` again.
@@ -88,3 +104,23 @@ $ cmake --build . --target addon_debug
 ```
 
 (Both `MinGW Makefiles` and `Visual Studio` toolchains are available)
+
+Remember to add the build directory to `.gitignore`.
+
+## Build
+
+Build only:
+
+```shell
+$ yarn
+$ yarn install
+$ yarn build
+```
+
+Build and run:
+
+```shell
+$ yarn
+$ yarn install
+$ yarn start
+```
