@@ -41,7 +41,7 @@ $ sudo apt install build-essential
 
 Make sure that CXX and C compilers are available on your device.
 
-For `node-addon-api` developers, `MinGW Makefiles` toolchain is not supported. Use Visual Studio instead.
+For `node-addon-api` developers, `MinGW Makefiles` generator is not supported. Use Visual Studio instead.
 
 ### cmake-js
 
